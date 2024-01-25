@@ -1,4 +1,5 @@
 ENTRY(vector_start)
+
 SECTIONS
 {
     . = 0x0;
@@ -8,10 +9,12 @@ SECTIONS
         *(vector_start)
         *(.text .rodata)
     }
+
     .data :
     {
         *(.data)
     }
+
     .bss :
     {
         *(.bss)
